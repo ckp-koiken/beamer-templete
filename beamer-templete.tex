@@ -1,0 +1,159 @@
+ \documentclass[12pt,xcolor=dvipsnames,table,dvipdfmx, aspectratio=169]{beamer} %アスペクト比を16:9にする
+
+
+\usepackage[round]{natbib}
+\setcitestyle{aysep={}}
+\bibliographystyle{jecon}
+\usepackage{bxdpx-beamer}
+\usepackage{pxjahyper}
+%\usepackage{minijs} %pLaTeXの場合
+%\renewcommand{\kanjifamilydefault}{\gtdefault}
+
+
+%Beamerの設定
+%\usetheme[progressbar=frametitle]{metropolis} %メトロポリスを使いたいときはこっち
+\usetheme{Boadilla}
+%Beamerフォント設定
+\usepackage{txfonts} % TXフォント
+\usepackage[deluxe,uplatex]{otf} % 日本語多ウェイト化
+% \usepackage[deluxe]{otf} % platexの場合はこちら
+\usepackage{pxjahyper} % PDF目次文字化け回避(platexでは不要)
+\renewcommand{\familydefault}{\sfdefault}  % 英文をサンセリフ体に
+\renewcommand{\kanjifamilydefault}{\gtdefault}  % 日本語をゴシック体に
+\usefonttheme{structurebold} % タイトル部を太字
+\setbeamerfont{alerted text}{series=\bfseries} % Alertを太字
+%\setbeamerfont{section in toc}{series=\mdseries} % 目次は太字にしない
+%\setbeamerfont{frametitle}{size=\Large} % フレームタイトル文字サイズ
+%\setbeamerfont{title}{size=\LARGE} % タイトル文字サイズ
+%\setbeamerfont{date}{size=\small}  % 日付文字サイズ
+
+% Babel (日本語の場合のみ・英語の場合は不要)
+\uselanguage{japanese}
+\languagepath{japanese}
+\deftranslation[to=japanese]{Theorem}{定理}
+\deftranslation[to=japanese]{Lemma}{補題}
+\deftranslation[to=japanese]{Example}{例}
+\deftranslation[to=japanese]{Examples}{例}
+\deftranslation[to=japanese]{Definition}{定義}
+\deftranslation[to=japanese]{Definitions}{定義}
+\deftranslation[to=japanese]{Problem}{問題}
+\deftranslation[to=japanese]{Solution}{解}
+\deftranslation[to=japanese]{Fact}{事実}
+\deftranslation[to=japanese]{Proof}{証明}
+\def\proofname{証明}
+
+
+%フラットデザイン化
+\setbeamertemplate{blocks}[rounded] % Blockの影を消す
+\useinnertheme{circles} % 箇条書きをシンプルに
+\setbeamertemplate{navigation symbols}{} % ナビゲーションシンボルを消す
+%\setbeamertemplate{footline}[frame number] % フッターはスライド番号のみ
+
+
+
+% graphicx.sty
+\usepackage{graphicx}
+
+
+
+% Tikz
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,arrows}
+
+% 定理環境
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newenvironment{mythm}{\begin{alertblock}{定理}}{\end{alertblock}} %自分の結果は赤色で表示
+\newtheorem{hypo}{仮説}
+
+%セクションごとにタイトルスライドを挿入
+% \AtBeginSection[]{
+%     \frame{\tableofcontents[currentsection, hideallsubsections]}
+% }
+
+
+
+\usepackage{ltablex}
+\usepackage{ascmac}
+\usepackage{fancybox}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{multirow}
+\usepackage{comment}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{diagbox}
+
+
+%newcommandで下付き
+\newcommand{\mymin}{\mathop{\rm min}\limits}
+\newcommand{\mymax}{\mathop{\rm max}\limits}
+
+
+\title{タイトル}
+\subtitle{サブタイトル}
+\author[name]{名前}
+\institute[workplace]{所属}
+\date{\today}
+%\titlegraphic{画像や場所情報を並べたいときはここ}
+
+
+\begin{document}
+	\begin{frame}[plain] %タイトルページだけはシンプルにするためplainオプションを入れる
+		\titlepage
+	\end{frame}
+
+
+ 	\section*{目次} %目次のページを目次に入れない
+ 	\begin{frame}{目次}
+ 	\tableofcontents
+	 \end{frame}
+
+\section{セクションタイトル}
+
+\begin{frame}{\insertsection}{スライド名}
+	\begin{block}{test}
+	\end{block}
+	
+	\begin{exampleblock}{テスト}
+	\end{exampleblock}
+	
+	\begin{alertblock}{強調テスト}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}{画面分割}
+  \begin{block}{top block}
+  test
+  \end{block}
+  \begin{columns}[c]  % 中央をあわせる
+  %\begin{columns}[t] % 上辺をあわせる
+    \begin{column}{0.5\textwidth} % 横幅の50％
+    説明を入れる
+    \end{column}
+    \begin{column}{0.5\textwidth} % 横幅の65％
+      \begin{block}{right block}
+        \begin{itemize}
+          \item 箇条書きも入る
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \begin{block}{bottom block}
+  \structure{例示} \\
+  \alert{強調}
+  \end{block}
+  \end{frame}
+
+
+
+	% \begin{frame}[allowframebreaks]{参考文献} %allowframebreaksで2ページに渡る参考文献のページを分ける
+	% 		\bibliography{}
+	% \end{frame}
+
+
+
+
+\end{document}
