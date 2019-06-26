@@ -4,7 +4,7 @@ INPUT /usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2019/texmf.cnf
 INPUT /usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2019/texmf-var/web2c/euptex/uplatex.fmt
-INPUT beamer-templete.tex
+INPUT /Users/kkoi/github/beamer-templete/beamer-templete.tex
 OUTPUT beamer-templete.log
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/beamer/beamer.cls
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/beamer/beamer.cls
@@ -493,6 +493,8 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/txfonts/txexa.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/txfonts/txsssl.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/txfonts/txsssl.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/txfonts/txsssl.tfm
+INPUT beamer-templete.bbl
+INPUT beamer-templete.bbl
 OUTPUT beamer-templete.nav
 OUTPUT beamer-templete.toc
 OUTPUT beamer-templete.snm
