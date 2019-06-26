@@ -1,2 +1,2 @@
 \beamer@sectionintoc {2}{セクションタイトル}{3}{0}{1}
-\beamer@sectionintoc {3}{参考文献の標記}{5}{0}{2}
+\beamer@sectionintoc {3}{参考文献の表記}{5}{0}{2}
